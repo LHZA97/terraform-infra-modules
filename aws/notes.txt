@@ -1,0 +1,14 @@
+Passing some password on the runtime:
+`terraform apply -var="db_user=admin" -var="db_pass=password"`
+In variable.tf, put the sensitive as true for both vars.
+
+Recommended store some sensitive data in vault or something.
+
+Managing multiple environments
+
+terraform workspace new dev
+terraform apply
+terraform workspace new staging
+terraform workspace select dev
+
+terraform file tree directory
